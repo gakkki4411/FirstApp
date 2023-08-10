@@ -6,9 +6,9 @@ import {Quiz} from "./components/Quiz.js";
 export default function App() {
   return (
     <div> 
-    <Header />
-    <Quiz />
-    <Footer />
+      <Header />
+      <Quiz number={0}/>
+      <Footer />
     </div>
   );
 }
