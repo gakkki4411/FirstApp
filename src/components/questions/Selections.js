@@ -1,12 +1,18 @@
 import {useEffect, useState, useRef, useCallback} from "react";
-
 export function Selections(props){
+    const [T, setT] = useState("");
     function isCorrect(number){
-        if(number === props.answer){
-            console.log("Correct");
+        if(T != ""){//何回も回答できないようにする
+            return;
+        }
+        if(number == props.answer){
+            setT("正解");
+            console.log("o");
         }
         else{
-            console.log("Wrong");
+            setT("不正解 正解は" + props.answer);
+            console.log("x");
+            console.log(props.answer);
         }
     };
     return(
@@ -29,6 +35,8 @@ export function Selections(props){
                     props.stop();
                     isCorrect(4);
                 }}>4</button>
+                <br/>
+                <p>{T}</p>
             </div>
     );
 }

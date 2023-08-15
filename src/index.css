@@ -1,6 +1,14 @@
 /* RESETS */
-.section{
-    position:absolute;
-    left: 500px;
-
+.home{
+    text-align:center;
+    padding:2px 0;
+}
+body{
+    border: 8px double rgb(201, 225, 238);
+}
+.selection{
+    background: #ddeafa;
+}
+.hint{
+    background: #e3ffef;
 }

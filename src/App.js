@@ -2,7 +2,7 @@ import * as React from 'react'
 import {Header} from "./components/Header.js";
 import {Footer} from "./components/Footer.js";
 import {Quiz} from "./components/Quiz.js";
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import {QuestionsAndHints, NumberOfQuestion} from "./components/questions/QuestionsAndHints.js";
 const numbers = ()=>{
   var ans = [];
@@ -22,15 +22,15 @@ export default function App() {
   <option key={number} value={number}>{number}</option>
   );
   return (
-    <div> 
+    <div className="home"> 
       <Header />
-      問題番号を選択
+      問題番号を選択してstartを押してください
       <select onChange={change} value={selectedQuestions}>
           {Questions}
       </select>
       <Quiz hints={QuestionsAndHints(selectedQuestions-1)["Hints"]} 
       selection={QuestionsAndHints(selectedQuestions-1)["Selections"]} 
-      answer={QuestionsAndHints(selectedQuestions-1)["Answers"]}/>
+      answer={QuestionsAndHints(selectedQuestions-1)["Answer"]}/>
       <Footer />
     </div>
   );

@@ -1,9 +1,9 @@
 import React from "react";
-
+import '../index.css';
 export function Footer(){
     return(
-       <footer>
-        <p>コピーライトを書くらしい</p>
+       <footer className="home">
+        <p></p>
        </footer>
     );
 }
