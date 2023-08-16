@@ -3,7 +3,7 @@ import '../index.css';
 export function Footer(){
     return(
        <footer className="home">
-        <p></p>
+        <p>プラウザを再読み込みすると秒数がリセットされます</p>
        </footer>
     );
 }

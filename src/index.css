@@ -5,6 +5,7 @@
 }
 body{
     border: 8px double rgb(201, 225, 238);
+    font-size: 28px;
 }
 .selection{
     background: #ddeafa;
@@ -12,3 +13,9 @@ body{
 .hint{
     background: #e3ffef;
 }
+button, select{
+    width: 110px;
+    padding: 7px;
+    font-size: 26px;
+}
+

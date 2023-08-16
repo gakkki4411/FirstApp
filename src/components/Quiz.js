@@ -26,7 +26,6 @@ export function Quiz(props){
                 countHint.current++;
             }
         }, 1000);
-        setSelection(<Selections stop={stop} answer={props.answer} selections={props.selection}/>);
     }, []);
 
     //タイマーストップ
@@ -40,7 +39,10 @@ export function Quiz(props){
     return(
         <div className="home">
             <time>{time}</time>秒
-            <button onClick={start}>start</button>
+            <button onClick={() => {
+                start();
+                setSelection(<Selections stop={stop} answer={props.answer} selections={props.selection}/>);
+            }}>start</button>
             <div>{selection}</div>
             <div>
                 ヒント(5秒ごとに表示されます)<br/>
