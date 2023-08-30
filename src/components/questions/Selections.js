@@ -7,12 +7,9 @@ export function Selections(props){
         }
         if(number == props.answer){
             setT("正解");
-            console.log("o");
         }
         else{
             setT("不正解 正解は" + props.answer);
-            console.log("x");
-            console.log(props.answer);
         }
     };
     return(
