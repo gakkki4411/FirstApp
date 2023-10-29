@@ -20,12 +20,12 @@ export function Quiz(props){
             return;
         }
         interval.current = setInterval(() =>{
-            setTime(c => c+1);
+            setTime(c => (c+10));
             countTime++;
             if(countTime% 5 === 0 || countTime === 1){
                 countHint.current++;
             }
-        }, 1000);
+        }, 10);
     }, []);
 
     //タイマーストップ
@@ -38,7 +38,7 @@ export function Quiz(props){
     }, []);
     return(
         <div className="home">
-            <time>{time}</time>秒
+            <time>{time/1000}</time>秒
             <button onClick={() => {
                 start();
                 setSelection(<Selections stop={stop} answer={props.answer} selections={props.selection}/>);
