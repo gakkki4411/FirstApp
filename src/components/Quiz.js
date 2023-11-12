@@ -45,7 +45,7 @@ export function Quiz(props){
             }}>start</button>
             <div>{selection}</div>
             <div>
-                ヒント!(5秒ごとに表示されます)<br/>
+                !ヒント!(5秒ごとに表示されます)<br/>
                 <ol className="hint">{list}</ol>
             </div>
         </div>
