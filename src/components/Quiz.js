@@ -22,7 +22,7 @@ export function Quiz(props){
         interval.current = setInterval(() =>{
             setTime(c => (c+10));
             countTime++;
-            if(countTime% 5 === 0 || countTime === 1){
+            if(countTime% 500 === 0 || countTime === 100){
                 countHint.current++;
             }
         }, 10);
